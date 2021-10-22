@@ -1,0 +1,97 @@
+---
+title: "Biométrie humaine"
+author: '....'
+date: "06/10/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+SciViews::R
+library(mlearning)
+```
+
+# Objectif
+
+Ce document s'intéresse à la comparaison d'algorithmes.
+
+Proposez le meilleur algorithme afin de prédire la variable `genre` du jeu de données `biometry.csv`.
+
+**Ce projet est un projet cadré. Vous devez uniquement répondre à la question posée.**
+
+# Analyses
+
+> Importez le jeu de données `biometry.csv`. Assurez vous que chaque variable soit dans un format correcte. 
+
+```{r import}
+bio <-
+```
+
+> Utilisez la fonction table() afin de mettre en évidence le nombre de niveau de la variable `genre`ainsi que le nombre d'occurence par niveau de cette variable.
+
+```{r table}
+
+```
+
+> Réalisez 3 graphiques différents de votre choix pour explorer ce jeu de données. Chaque graphique doit être commenté en 1 à 2 lignes.
+
+```{r plot1}
+
+```
+
+```{r plot2}
+
+```
+
+```{r plot3}
+
+```
+
+## ADL
+
+> réalisez une analyse discriminante linéaire afin de prédire la variable `genre`. Détaillez le principe de cette analyse en maximum 3 lignes. 
+
+```{r}
+bio_lda <- 
+```
+
+> Obtenez les classes prédites par la lda via une validation croisée. Réalisez ensuite une matrice de confusion. Détaillez le résultat de votre matrice de confusion en maximum 3 lignes.
+
+```{r}
+bio_pred <- 
+bio_conf <- 
+```
+
+## Quantification vectorielle
+
+> réalisez la quantification vectorielle afin de prédire la variable `genre`. Détaillez le principe de cette analyse en maximum 3 lignes.
+
+```{r}
+bio_lvq <- 
+```
+
+> Obtenez les classes prédites par la lvq via une validation croisée. Réalisez ensuite une matrice de confusion. Détaillez le résultat de votre matrice de confusion en maximum 3 lignes.
+
+```{r}
+bio_pred <- 
+bio_conf <- 
+```
+
+## Forêt alétoire
+
+> réalisez une forêt aléatoire afin de prédire la variable `genre`. Détaillez le principe de cette analyse en maximum 3 lignes.
+
+```{r}
+bio_rf <- 
+```
+
+> Obtenez les classes prédites par la forêt aléatoire via une validation croisée. Réalisez ensuite une matrice de confusion. Détaillez le résultat de votre matrice de confusion en maximum 3 lignes.
+
+```{r}
+bio_pred <- 
+bio_conf <- 
+```
+
+# Conclusion
+
+> Après avoir testé 3 algorithmes de classification, quel est le meilleur algorithme selon vous ?
+

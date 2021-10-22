@@ -1,0 +1,97 @@
+---
+title: "Analyse du plancton de Calvi"
+author: '....'
+date: "06/10/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+SciViews::R
+library(mlearning)
+```
+
+# Objectif
+
+Ce document s'intéresse à la comparaison d'algorithmes.
+
+Proposez le meilleur algorithme afin de prédire la variable `Class` du jeu de données `plancton_set_calvi.csv`.
+
+**Ce projet est un projet cadré. Vous devez uniquement répondre à la question posée.**
+
+# Analyses
+
+> Importez le jeu de données `plancton_set_calvi.csv`. Assurez vous que chaque variable soit dans un format correcte. 
+
+```{r import}
+zoo <-
+```
+
+> Utilisez la fonction table() afin de mettre en évidence le nombre de niveau de la variable `Class`ainsi que le nombre d'occurence par niveau de cette variable.
+
+```{r table}
+
+```
+
+> Réalisez 3 graphiques différents de votre choix pour explorer ce jeu de données. Chaque graphique doit être commenté en 1 à 2 lignes.
+
+```{r plot1}
+
+```
+
+```{r plot2}
+
+```
+
+```{r plot3}
+
+```
+
+## ADL
+
+> réalisez une analyse discriminante linéaire afin de prédire la variable `Class`. Détaillez le principe de cette analyse en maximum 3 lignes. 
+
+```{r}
+zoo_lda <- 
+```
+
+> Obtenez les classes prédites par la lda via une validation croisée. Réalisez ensuite une matrice de confusion. Détaillez le résultat de votre matrice de confusion en maximum 3 lignes.
+
+```{r}
+zoo_pred <- 
+zoo_conf <- 
+```
+
+## Quantification vectorielle
+
+> réalisez la quantification vectorielle afin de prédire la variable `Class`. Détaillez le principe de cette analyse en maximum 3 lignes.
+
+```{r}
+zoo_lvq <- 
+```
+
+> Obtenez les classes prédites par la lvq via une validation croisée. Réalisez ensuite une matrice de confusion. Détaillez le résultat de votre matrice de confusion en maximum 3 lignes.
+
+```{r}
+zoo_pred <- 
+zoo_conf <- 
+```
+
+## Forêt alétoire
+
+> réalisez une forêt aléatoire afin de prédire la variable `Class`. Détaillez le principe de cette analyse en maximum 3 lignes.
+
+```{r}
+zoo_rf <- 
+```
+
+> Obtenez les classes prédites par la forêt aléatoire via une validation croisée. Réalisez ensuite une matrice de confusion. Détaillez le résultat de votre matrice de confusion en maximum 3 lignes.
+
+```{r}
+zoo_pred <- 
+zoo_conf <- 
+```
+
+# Conclusion
+
+> Après avoir testé 3 algorithmes de classification, quel est le meilleur algorithme selon vous ?
+

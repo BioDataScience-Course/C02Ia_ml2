@@ -1,0 +1,80 @@
+---
+title: "Validation Croisée"
+author: '....'
+date: "06/10/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+SciViews::R
+library(mlearning)
+```
+
+# Objectif
+
+Ce document s'intéresse à la validation croisée.
+
+Proposez une comparaison entre la séparation en set d'apprentissage/set de test et la validation croisée.
+
+**Ce projet est un projet cadré. Vous devez uniquement répondre à la question posée.**
+
+# Analyses
+
+> Importez le jeu de données `plancton_set_calvi.csv`. Assurez vous que chaque variable soit dans un format correcte. 
+
+```{r import}
+zoo <-
+```
+
+> Utilisez la fonction table() afin de mettre en évidence le nombre de niveau de la variable `Class`ainsi que le nombre d'occurence par niveau de cette variable.
+
+```{r table}
+
+```
+
+## Set d'apprentissage/set de test
+
+Complétez ce chunk afin de diviser le jeu de données en un set d'apprentissage et en un set de test. Utilisez 3/4 des observations pour votre set d'apprentissage. Commentez ce chunk en 3 lignes maximum. 
+
+```{r}
+set.seed(42)
+# Ajoutez vos instructions ici
+# 
+zoo_learn <- 
+zoo_test <-
+```
+
+> Créez votre classifieur. Utilisez la lda afin de réaliser un classifieur qui prédit la classe des individus étudiés.
+
+```{r}
+zoo_lda <- 
+```
+
+> Testez votre classifieur via une matrice de confusion. Critiquez en 5 lignes maximum votre résultat.
+
+```{r}
+zoo_pred <- predict(zoo_lda,___)
+zoo_conf <- 
+summary(zoo_conf)
+```
+
+
+## Validation croisée
+
+> Créez votre second classifieur. Utilisez la lda afin de réaliser un classifieur qui prédit la classe des individus étudiés.
+
+```{r}
+zoo_lda2 <- 
+```
+
+> Testez votre classifieur via une matrice de confusion. Critiquez en 5 lignes maximum votre résultat.
+
+```{r}
+zoo_pred2 <- ___
+zoo_conf2 <- ___
+summary(zoo_conf2)
+```
+
+# Conclusion
+
+> Comparez les résultats obtenus avec et sans validation croisée en 5 lignes maximum.
